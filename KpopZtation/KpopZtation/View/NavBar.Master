@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NavBar.master.cs" Inherits="KpopZtation.View.NavBar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <% if (Session["user"] == null)
+                { %>
+            <asp:Button ID="HomeButtonLogin" runat="server" Text="Home" OnClick="homeButton_Click"/>
+            <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="loginButton_Click"/>
+            <asp:Button ID="RegisterButton" runat="server" Text="Register" OnClick="registerButton_Click"/>
+            <%}
+                else
+                {
+                    if (custo.CustomerRole == "Admin")
+                    {  %>
+                <asp:Button ID="HomeButtonAdmin" runat="server" Text="Home" OnClick="homeButton_Click"/>
+                <asp:Button ID="transactionButton" runat="server" Text="Transaction" OnClick="transactionButton_Click"/>
+                <asp:Button ID="updateProfileButton" runat="server" Text="Update Profile" OnClick="updateProfileButton_Click"/>
+                <asp:Button ID="logoutButton" runat="server" Text="Logout" OnClick="logoutButton_Click"/>
+            <%  }else if (custo.CustomerRole == "Custo")
+                {%>
+                <asp:Button ID="HomeButtonCustomer" runat="server" Text="Home" OnClick="homeButton_Click"/>
+                <asp:Button ID="cartsButton" runat="server" Text="Cart" OnClick="cartsButton_Click"/>
+                <asp:Button ID="transactionButtonCustomer" runat="server" Text="Transaction" OnClick="transactionButtonCustomer_Click"/>
+                <asp:Button ID="updateProfileButtoncustomer" runat="server" Text="Update Profile" OnClick="updateProfileButton_Click"/>
+                <asp:Button ID="logoutButtoncustomer" runat="server" Text="Logout" OnClick="logoutButton_Click"/>
+            <%}
+               }%>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
