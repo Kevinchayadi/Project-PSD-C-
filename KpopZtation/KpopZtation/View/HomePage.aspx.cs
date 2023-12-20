@@ -26,6 +26,12 @@ namespace KpopZtation.View
                 }
             }
             List<Artist> data = tr.GetAllArtist();
+            foreach (var artist in data)
+            {
+
+                    artist.ArtistImage = "../Images/" + artist.ArtistImage;
+
+            }
             GridView1.DataSource = data;
             GridView1.DataBind();
 

@@ -39,9 +39,12 @@ namespace KpopZtation.View
             WarningPhoto.Text = tc.checkimg(fileUpload);
             if (WarningPhoto.Text.Equals(""))
             {
-                string fileName = Path.GetFileName(fileUpload.FileName);
-                string folderPath = Server.MapPath("~/KpopZtation/Images/" + fileName);
-                link = "~/KpopZtation/Images/" + fileName;
+                Guid ui = Guid.NewGuid();
+                // string fileName = Path.GetFileName(fileUpload.FileName);
+                string fileName = ui.ToString() + System.IO.Path.GetExtension(fileUpload.PostedFile.FileName);
+                string directory = "Images/";
+                string folderPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, directory, fileName); ;
+                link =  fileName;
                 fileUpload.SaveAs(folderPath);
                 foto = true;
             }

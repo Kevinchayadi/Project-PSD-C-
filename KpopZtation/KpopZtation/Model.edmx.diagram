@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="fff070940ead4a42a431987de0492cf8" Name="Diagram1">
         <EntityTypeShape EntityType="Database1Model.Album" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="Database1Model.Artist" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Database1Model.Artist" Width="1.5" PointX="0.5" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.Cart" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.Customer" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Database1Model.TransactionDetail" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />

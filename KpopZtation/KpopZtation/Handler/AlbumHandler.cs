@@ -25,7 +25,7 @@ namespace KpopZtation.Handler
             {
                 if (album.ArtistID == artisId)
                 {
-                    temp.AlbumImage = "../Assets/Albums/" + album.AlbumImage;
+                    temp.AlbumImage = "../Images/" + album.AlbumImage;
                     album.AlbumImage = temp.AlbumImage;
                     artistAlbums.Add(album);
                 }

@@ -62,7 +62,7 @@ namespace KpopZtation.Controller
         {
             if (fileUpload.HasFile)
             {
-                string fileExtension = Path.GetExtension(fileUpload.FileName).ToLower();
+                string fileExtension = System.IO.Path.GetExtension(fileUpload.PostedFile.FileName);
                 if (fileExtension == ".png" || fileExtension == ".jpg" || fileExtension == ".jpeg" || fileExtension == ".jfif")
                 {
                     if (fileUpload.FileBytes.Length <= 2 * 1024 * 1024)
